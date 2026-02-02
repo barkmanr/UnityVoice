@@ -369,7 +369,7 @@ GameObject:
   - component: {fileID: 1089858649}
   - component: {fileID: 1089858648}
   m_Layer: 0
-  m_Name: Recorder2
+  m_Name: SilentRec
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -388,7 +388,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -580,6 +580,7 @@ GameObject:
   - component: {fileID: 1388250145}
   - component: {fileID: 1388250149}
   - component: {fileID: 1388250150}
+  - component: {fileID: 1388250151}
   m_Layer: 0
   m_Name: Plane
   m_TagString: Untagged
@@ -699,7 +700,23 @@ MonoBehaviour:
   - {fileID: 8300000, guid: d4b14899b4325af42bd674d5f23d2f76, type: 3}
   - {fileID: 8300000, guid: 18174a802401ce9459cb148c6e8ec994, type: 3}
   audioSource: {fileID: 1748644479}
+  SilentSource: {fileID: 1089858648}
+  NewClipData: []
 --- !u!114 &1388250150
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1388250144}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e08a1500cedf0d4abd9efeff5e7045b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RecordAudio
+  recClip: {fileID: 0}
+  audioSource: {fileID: 1089858648}
+--- !u!114 &1388250151
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -708,9 +725,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1388250144}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e08a1500cedf0d4abd9efeff5e7045b, type: 3}
+  m_Script: {fileID: 11500000, guid: dec24d230b4629a4ca41fc2fce9821b3, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::RecordAudio
+  m_EditorClassIdentifier: Assembly-CSharp::RecordMatch
   recClip: {fileID: 0}
   audioSource: {fileID: 1089858648}
 --- !u!1 &1748644478
@@ -1127,8 +1144,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1388250150}
-        m_TargetAssemblyTypeName: RecordAudio, Assembly-CSharp
+      - m_Target: {fileID: 1388250151}
+        m_TargetAssemblyTypeName: RecordMatch, Assembly-CSharp
         m_MethodName: StartRecording
         m_Mode: 1
         m_Arguments:
@@ -1235,7 +1252,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &3059040989879192736
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1529,8 +1546,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1388250150}
-        m_TargetAssemblyTypeName: RecordAudio, Assembly-CSharp
+      - m_Target: {fileID: 1388250151}
+        m_TargetAssemblyTypeName: RecordMatch, Assembly-CSharp
         m_MethodName: StopRecording
         m_Mode: 1
         m_Arguments:
