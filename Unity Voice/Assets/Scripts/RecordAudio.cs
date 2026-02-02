@@ -8,11 +8,13 @@ public class RecordAudio : MonoBehaviour
     public void StartRecording()
     {
         if(Microphone.devices.Length <= 0) { Debug.Log("No Mike"); return; }
-        string device = Microphone.devices[0];
-        int sampleRate = 44100;
-        int lengthSec = 1000; //at most in sec
 
-        recClip = Microphone.Start(device,false,lengthSec,sampleRate);
+        string device = Microphone.devices[0]; //first micro
+        int sampleRate = 44100;
+        int MaxSec = 1000; //at most in sec
+
+        recClip = Microphone.Start(device,false,MaxSec,sampleRate);
+        //Device, IsLoop,MaxSecs,samplerate
     }
 
     public void PlayRecording()
