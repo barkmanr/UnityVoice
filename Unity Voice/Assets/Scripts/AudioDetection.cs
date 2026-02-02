@@ -10,11 +10,12 @@ public class AudioDetection : MonoBehaviour
     {
         MicrophoneToAudioClip();
     }
-    public void MicrophoneToAudioClip()
+    public void MicrophoneToAudioClip() //start looping mike
     {
         if(Microphone.devices.Length == 0) { Debug.Log("No Mike2");  return; }
-        string microphoneName = Microphone.devices[0];
-        microphoneClip = Microphone.Start(microphoneName,true,20,AudioSettings.outputSampleRate);
+
+        string device = Microphone.devices[0];
+        microphoneClip = Microphone.Start(device,true,20,AudioSettings.outputSampleRate); //loop is on, every 20 sec overwrite it
     }
 
     public float GetLoudnessFromMicrophone()

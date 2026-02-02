@@ -1,6 +1,6 @@
 using UnityEngine;
 //https://www.youtube.com/watch?v=faLbKJ_AufU
-public class RecordAudio : MonoBehaviour
+public class RecordAudio : MonoBehaviour //ui buttons to do the 3 rec stuff
 {
     private AudioClip recClip;
     [SerializeField] AudioSource audioSource;
