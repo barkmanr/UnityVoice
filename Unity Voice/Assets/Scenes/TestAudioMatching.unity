@@ -582,6 +582,7 @@ GameObject:
   - component: {fileID: 1388250150}
   - component: {fileID: 1388250151}
   - component: {fileID: 1388250152}
+  - component: {fileID: 1388250153}
   m_Layer: 0
   m_Name: Plane
   m_TagString: Untagged
@@ -713,7 +714,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1388250144}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8e08a1500cedf0d4abd9efeff5e7045b, type: 3}
   m_Name: 
@@ -727,7 +728,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1388250144}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dec24d230b4629a4ca41fc2fce9821b3, type: 3}
   m_Name: 
@@ -741,7 +742,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1388250144}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4ff1ffb84d68f724fb914894de2a4148, type: 3}
   m_Name: 
@@ -759,6 +760,23 @@ MonoBehaviour:
   spectrumSize: 256
   melBands: 26
   NewClipData: []
+--- !u!114 &1388250153
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1388250144}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60bb39b0b14ac6543955f022925fa7f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::KeyRec
+  keywords:
+  - hello
+  - start
+  - jump
+  - fire
 --- !u!1 &1748644478
 GameObject:
   m_ObjectHideFlags: 0
@@ -1173,8 +1191,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1388250151}
-        m_TargetAssemblyTypeName: RecordMatch, Assembly-CSharp
+      - m_Target: {fileID: 1388250150}
+        m_TargetAssemblyTypeName: RecordAudio, Assembly-CSharp
         m_MethodName: StartRecording
         m_Mode: 1
         m_Arguments:
@@ -1281,7 +1299,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &3059040989879192736
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1575,8 +1593,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1388250151}
-        m_TargetAssemblyTypeName: RecordMatch, Assembly-CSharp
+      - m_Target: {fileID: 1388250150}
+        m_TargetAssemblyTypeName: RecordAudio, Assembly-CSharp
         m_MethodName: StopRecording
         m_Mode: 1
         m_Arguments:
