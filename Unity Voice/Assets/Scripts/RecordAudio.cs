@@ -5,6 +5,8 @@ public class RecordAudio : MonoBehaviour //ui buttons to do the 3 rec stuff
     public AudioClip recClip;
     [SerializeField] AudioSource audioSource;
 
+    private float time = 0.0f; //need to know when to trim
+
     public void StartRecording()
     {
         if(Microphone.devices.Length <= 0) { Debug.Log("No Mike"); return; }

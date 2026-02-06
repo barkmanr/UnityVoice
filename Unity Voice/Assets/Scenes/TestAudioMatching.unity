@@ -581,6 +581,7 @@ GameObject:
   - component: {fileID: 1388250149}
   - component: {fileID: 1388250150}
   - component: {fileID: 1388250151}
+  - component: {fileID: 1388250152}
   m_Layer: 0
   m_Name: Plane
   m_TagString: Untagged
@@ -689,7 +690,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1388250144}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6ea4eef8fc3137640a76ba62dd8d6c2e, type: 3}
   m_Name: 
@@ -699,6 +700,9 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 6ea1ccb989cc0db4eb8bb70d9014bbc3, type: 3}
   - {fileID: 8300000, guid: d4b14899b4325af42bd674d5f23d2f76, type: 3}
   - {fileID: 8300000, guid: 18174a802401ce9459cb148c6e8ec994, type: 3}
+  - {fileID: 8300000, guid: 08080781177f7934ea8e6e6e69998656, type: 3}
+  - {fileID: 8300000, guid: 07145d3a7be081d4c8094561f744c0b0, type: 3}
+  - {fileID: 8300000, guid: a04ea46ad82a2e5459c3543e1915f6bc, type: 3}
   audioSource: {fileID: 1748644479}
   SilentSource: {fileID: 1089858648}
   NewClipData: []
@@ -730,6 +734,31 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::RecordMatch
   recClip: {fileID: 0}
   audioSource: {fileID: 1089858648}
+--- !u!114 &1388250152
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1388250144}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ff1ffb84d68f724fb914894de2a4148, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NewMFCC
+  Clips:
+  - {fileID: 8300000, guid: 389130b5715dac248aa86a82ad385863, type: 3}
+  - {fileID: 8300000, guid: 6ea1ccb989cc0db4eb8bb70d9014bbc3, type: 3}
+  - {fileID: 8300000, guid: d4b14899b4325af42bd674d5f23d2f76, type: 3}
+  - {fileID: 8300000, guid: 18174a802401ce9459cb148c6e8ec994, type: 3}
+  - {fileID: 8300000, guid: 08080781177f7934ea8e6e6e69998656, type: 3}
+  - {fileID: 8300000, guid: 07145d3a7be081d4c8094561f744c0b0, type: 3}
+  - {fileID: 8300000, guid: a04ea46ad82a2e5459c3543e1915f6bc, type: 3}
+  audioSource: {fileID: 1748644479}
+  SilentSource: {fileID: 1089858648}
+  spectrumSize: 256
+  melBands: 26
+  NewClipData: []
 --- !u!1 &1748644478
 GameObject:
   m_ObjectHideFlags: 0

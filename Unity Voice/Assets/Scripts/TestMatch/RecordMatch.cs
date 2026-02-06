@@ -5,21 +5,53 @@ public class RecordMatch : MonoBehaviour
 {
     public AudioClip recClip;
     [SerializeField] AudioSource audioSource;
+    private string device;
+    int sampleRate = 44100;
+    int maxSec = 1000;
+
+    private float time = 0.0f; //need to know when to trim
+    private bool isRecord = false;
     public void StartRecording()
     {
         if (Microphone.devices.Length <= 0) { Debug.Log("No Mike"); return; }
 
-        string device = Microphone.devices[0]; //first micro
-        int sampleRate = 44100;
-        int MaxSec = 1000; //at most in sec
+        device = Microphone.devices[0];
 
-        recClip = Microphone.Start(device, false, MaxSec, sampleRate);
+
+        time = 0.0f;
+        isRecord = true;
+        recClip = Microphone.Start(device, false, maxSec, sampleRate);
         //Device, IsLoop,MaxSecs,samplerate
     }
 
-    public void StopRecording() //compare audio
+    private void Update()
     {
+        if (isRecord)
+        {
+            time += Time.deltaTime;
+        }
+    }
+
+    public void StopRecording() //compare audio (stole)
+    {
+        int samplesRecorded = Microphone.GetPosition(device);
+        isRecord = false;
         Microphone.End(null);
-        StartCoroutine(GetComponent<AudioClips>().MatchAudio(recClip));
+
+        float[] data = new float[samplesRecorded * recClip.channels];
+        recClip.GetData(data, 0);
+
+        AudioClip trimmedClip = AudioClip.Create(
+            "TrimmedRecording",
+            samplesRecorded,
+            recClip.channels,
+            sampleRate,
+            false
+        );
+
+        trimmedClip.SetData(data, 0);
+
+
+        StartCoroutine(GetComponent<NewMFCC>().MatchAudio(trimmedClip));
     }
 }
