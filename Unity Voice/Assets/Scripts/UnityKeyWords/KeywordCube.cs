@@ -13,9 +13,9 @@ public class VoiceTemp : MonoBehaviour
 
     void Start()
     {
-        actions.Add("fuck", Forward);
-        actions.Add("this", Down);
-        actions.Add("shit", Up);
+        actions.Add("zone", Forward);
+        actions.Add("dandy", Down);
+        actions.Add("fruit", Up);
         actions.Add("gnome", Back);
 
 

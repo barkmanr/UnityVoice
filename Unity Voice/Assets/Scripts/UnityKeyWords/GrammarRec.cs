@@ -15,7 +15,7 @@ public class GrammarRec : MonoBehaviour
         string filePath = Path.Combine(Application.streamingAssetsPath, "example.grxml");
         if (File.Exists(filePath)) //takes a minute
         {
-            recognizer = new GrammarRecognizer(filePath);
+            recognizer = new GrammarRecognizer(filePath,ConfidenceLevel.Low);
             recognizer.OnPhraseRecognized += OnPhraseRecognized;
             recognizer.Start();
             Debug.Log("Grammar Recognizer active!");

@@ -15,7 +15,7 @@ public class KeyRec : MonoBehaviour
         recognizer.OnPhraseRecognized += OnPhraseRecognized;
         recognizer.Start();
     }
-
+    //h
     void OnPhraseRecognized(PhraseRecognizedEventArgs args)
     {
         Debug.Log("Heard word: " + args.text);
