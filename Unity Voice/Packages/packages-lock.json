@@ -187,7 +187,7 @@
       "url": "https://packages.unity.com"
     },
     "com.whisper.unity": {
-      "version": "file:D:/Users/Test/Documents/UnityPackage/whisper.unity-master/Packages/com.whisper.unity",
+      "version": "file:whisper.unity-master/Packages/com.whisper.unity",
       "depth": 0,
       "source": "local",
       "dependencies": {}

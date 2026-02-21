@@ -1,4 +1,7 @@
 ﻿<Solution>
+  <Project Path="UnityVoiceProcessor.csproj" />
   <Project Path="Assembly-CSharp.csproj" />
+  <Project Path="com.whisper.unity.csproj" />
+  <Project Path="com.whisper.unity.editor.csproj" />
   <Project Path="Assembly-CSharp-Editor.csproj" />
 </Solution>
