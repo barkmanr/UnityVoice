@@ -1,0 +1,22 @@
+<grammar version="1.0" xml:lang="en-US" root="commandRule"
+         xmlns="http://www.w3.org/2001/06/grammar">
+
+  <rule id="commandRule">
+    <item repeat="0-1">please</item>
+    <item>
+      <one-of>
+        <item>move</item>
+        <item>go</item>
+        <item>shift</item>
+      </one-of>
+    </item>
+    <item>
+      <one-of>
+        <item semanticKey="dir">up</item>
+        <item semanticKey="dir">down</item>
+        <item semanticKey="dir">forward</item>
+        <item semanticKey="dir">back</item>
+      </one-of>
+    </item>
+  </rule>
+</grammar>

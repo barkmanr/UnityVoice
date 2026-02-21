@@ -2,8 +2,10 @@ using UnityEngine;
 //https://www.youtube.com/watch?v=faLbKJ_AufU
 public class RecordAudio : MonoBehaviour //ui buttons to do the 3 rec stuff
 {
-    private AudioClip recClip;
+    public AudioClip recClip;
     [SerializeField] AudioSource audioSource;
+
+    private float time = 0.0f; //need to know when to trim
 
     public void StartRecording()
     {
@@ -19,7 +21,7 @@ public class RecordAudio : MonoBehaviour //ui buttons to do the 3 rec stuff
 
     public void PlayRecording()
     {
-        if (recClip == null) { Debug.Log("Empty Rec"); }
+        if (recClip == null) { Debug.Log("Empty Rec"); return; }
         audioSource.clip = recClip;
         audioSource.Play();
     }
